@@ -54,10 +54,10 @@ module.exports = {
 				newY--;
 				break;
 			case 'east':
-				newX--;
+				newX++;
 				break;
 			case 'west':
-				newX++;
+				newX--;
 		}
 
 		// check that the new coordinates are in range

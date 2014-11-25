@@ -65,8 +65,7 @@ describe('testBoundaries', function(){
 		var result = robot.commend('report');
 		var location = result.split(',');
 
-		if(location[x] !== '0' || location[y] !== '2' || location[f] !== 'east') {
-			console.log(result);
+		if(location[x] !== '5' || location[y] !== '2' || location[f] !== 'east') {
 			throw 'Result is incorrect. Report: ' + result;
 		}
 
@@ -86,8 +85,7 @@ describe('testBoundaries', function(){
 		var result = robot.commend('report');
 		var location = result.split(',');
 
-		if(location[x] !== '5' || location[y] !== '2' || location[f] !== 'west') {
-			console.log(result);
+		if(location[x] !== '0' || location[y] !== '2' || location[f] !== 'west') {
 			throw 'Result is incorrect. Report: ' + result;
 		}
 
