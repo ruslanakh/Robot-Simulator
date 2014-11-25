@@ -1,0 +1,31 @@
+{
+  "name": "Robot-Simulator",
+  "version": "0.0.2",
+  "description": "robot simulator app",
+  "main": "app/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app/main.js data.txt",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruslanakh/Robot-Simulator.git"
+  },
+  "keywords": [
+    "robot",
+    "simulator"
+  ],
+  "author": "Ruslan Akhmediev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruslanakh/Robot-Simulator/issues"
+  },
+  "homepage": "https://github.com/ruslanakh/Robot-Simulator",
+  "dependencies": {
+    "mocha": "^2.0.1",
+    "node-fs": "^0.1.7"
+  }
+}
