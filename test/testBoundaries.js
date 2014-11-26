@@ -12,14 +12,14 @@ describe('testBoundaries', function(){
 	var f = 2;
 
 	it('North boundary', function(done) {
-	  	robot.commend('place 2,2,north');
+	  	robot.position(2,2,'north');
 
 	  	// 4 steps forward
 		for(var n=0; n < 4; n++) {
-			robot.commend('move');
+			robot.move();
 		}
 
-		var result = robot.commend('report');
+		var result = robot.report();
 		var location = result.split(',');
 
 		// check the results
@@ -31,17 +31,17 @@ describe('testBoundaries', function(){
 	});
 
 	it('South boundary', function(done) {
-		robot.commend('place 2,2,north');
+		robot.position(2,2,'north');
 
-		robot.commend('left');
-		robot.commend('left');
+		robot.left();
+		robot.left();
 
 		// 4 steps forward
 		for(var w=0; w < 4; w++) {
-			robot.commend('move');
+			robot.move();
 		}
 
-		var result = robot.commend('report');
+		var result = robot.report();
 		var location = result.split(',');
 
 		if(location[x] !== '2' || location[y] !== '0' || location[f] !== 'south') {
@@ -53,16 +53,16 @@ describe('testBoundaries', function(){
 	});
 
 	it('East boundary', function(done) {
-		robot.commend('place 2,2,north');
+		robot.position(2,2,'north');
 
-		robot.commend('right');
+		robot.right();
 
 		// 4 steps forward
 		for(var w=0; w < 4; w++) {
-			robot.commend('move');
+			robot.move();
 		}
 
-		var result = robot.commend('report');
+		var result = robot.report('report');
 		var location = result.split(',');
 
 		if(location[x] !== '5' || location[y] !== '2' || location[f] !== 'east') {
@@ -73,16 +73,16 @@ describe('testBoundaries', function(){
 	});
 
 	it('West boundary', function(done) {
-		robot.commend('place 2,2,north');
+		robot.position(2,2,'north');
 
-		robot.commend('left');
+		robot.left();
 
 		// 4 steps forward
 		for(var w=0; w < 4; w++) {
-			robot.commend('move');
+			robot.move();
 		}
 
-		var result = robot.commend('report');
+		var result = robot.report();
 		var location = result.split(',');
 
 		if(location[x] !== '0' || location[y] !== '2' || location[f] !== 'west') {

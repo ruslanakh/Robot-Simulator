@@ -10,7 +10,7 @@ $ npm install
 ```
 
 ### Run
-Running the commend below will process the commends in data.txt and return the result for each report.
+Running the commend below will process the commends in data.txt file and return the result for each report.
 
 ```sh
 $ npm start
